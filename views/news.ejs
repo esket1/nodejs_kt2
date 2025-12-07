@@ -1,0 +1,15 @@
+<h3><%= number %> последних новостей в категории <%= category %></h3>
+<dl>
+    <% 
+    let i = 0;
+    while (i < items.length) {
+        const item = items[i];
+        const itemNumber = i + 1;
+    %>
+        <dt>Новость <%= itemNumber %>: <%= item.title %></dt>
+        <dd><%= item.description %></dd>
+    <% 
+        i++;
+    } 
+    %>
+</dl>
